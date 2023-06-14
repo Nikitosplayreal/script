@@ -1,0 +1,43 @@
+wait(5)
+ 
+ 
+function create1 ()
+ 
+    local b = Instance.new("Part")
+    b.Parent = workspace
+    b.Name = "Parts"
+    b.Position = Vector3.new(-23.69, 0.5, -29.72)
+    b.Size = Vector3.new(1, 3, 4)
+ 
+ 
+end
+ 
+create1()
+ 
+ 
+ 
+function create ()
+ 
+    local b = Instance.new("ProximityPrompt")
+    b.Parent = workspace.Parts
+    b.Name = "ProximityPrompt"
+ 
+end
+ 
+create()
+ 
+function create2()
+ 
+    local b = Instance.new("Part")
+    b.Parent = game.Workspace
+    b.Name = "by"
+    b.Position = Vector3.new(0, 2, 0)
+    b.Size = Vector3.new(3, 3, 3)
+ 
+end
+ 
+game.Workspace.Parts.ProximityPrompt.Triggered:Connect(function()
+ 
+    create2()
+ 
+end)
